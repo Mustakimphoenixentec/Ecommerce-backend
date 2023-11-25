@@ -1,6 +1,6 @@
 # serializers.py
 from rest_framework import serializers
-from .models import MainMenu, SubMenu
+from .models import *
 
 class SubMenuSerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,3 +14,9 @@ class MainMenuSerializer(serializers.ModelSerializer):
         model = MainMenu
         fields = ['app_url', 'app_icon', 'menu_name', 'ChildMenu']
     
+
+
+# class AdminLoginSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = UserDetail
+#         fields = '__all__'
